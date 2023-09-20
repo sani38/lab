@@ -37,12 +37,12 @@ void distributeElements(int* staticArr, int size, int*& positiveArr, int& positi
 int main() {
     setlocale(0, "rus");
     int size;
-    cout << "Ââåäèòå ðàçìåð ìàññèâà: ";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ Ñ€Ð°Ð·Ð¼ÐµÑ€ Ð¼Ð°ÑÑÐ¸Ð²Ð°: ";
     cin >> size;
 
     int* staticArr = new int[size];
 
-    cout << "Ââåäèòå ýëåìåíòû ìàññèâà:\n";
+    cout << "Ð’Ð²ÐµÐ´Ð¸Ñ‚Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹ Ð¼Ð°ÑÑÐ¸Ð²Ð°:\n";
     for (int i = 0; i < size; ++i) {
         cin >> staticArr[i];
     }
@@ -58,19 +58,19 @@ int main() {
 
     distributeElements(staticArr, size, positiveArr, positiveSize, negativeArr, negativeSize, zeroArr, zeroSize);
 
-    cout << "Ïîëîæèòåëüíûå ýëåìåíòû:\n";
+    cout << "ÐŸÐ¾Ð»Ð¾Ð¶Ð¸Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹:\n";
     for (int i = 0; i < positiveSize; ++i) {
         cout << positiveArr[i] << " ";
     }
     cout << endl;
 
-    cout << "Îòðèöàòåëüíûå ýëåìåíòû:\n";
+    cout << "ÐžÑ‚Ñ€Ð¸Ñ†Ð°Ñ‚ÐµÐ»ÑŒÐ½Ñ‹Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹:\n";
     for (int i = 0; i < negativeSize; ++i) {
         cout << negativeArr[i] << " ";
     }
     cout << endl;
 
-    cout << "Íóëåâûå ýëåìåíòû:\n";
+    cout << "ÐÑƒÐ»ÐµÐ²Ñ‹Ðµ ÑÐ»ÐµÐ¼ÐµÐ½Ñ‚Ñ‹:\n";
     for (int i = 0; i < zeroSize; ++i) {
         cout << zeroArr[i] << " ";
     }
