@@ -14,14 +14,14 @@ bool isPrime(int num) {
 }
 
 int* removePrimes(int* arr, int size, int& newSize) {
-    // Считаем количество простых чисел в массиве
+    // РЎС‡РёС‚Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РїСЂРѕСЃС‚С‹С… С‡РёСЃРµР» РІ РјР°СЃСЃРёРІРµ
     int primeCount = 0;
     for (int i = 0; i < size; ++i) {
         if (isPrime(arr[i]))
             ++primeCount;
     }
 
-    // Создаем новый массив без простых чисел
+    // РЎРѕР·РґР°РµРј РЅРѕРІС‹Р№ РјР°СЃСЃРёРІ Р±РµР· РїСЂРѕСЃС‚С‹С… С‡РёСЃРµР»
     newSize = size - primeCount;
     int* newArr = new int[newSize];
     int index = 0;
@@ -37,12 +37,12 @@ int* removePrimes(int* arr, int size, int& newSize) {
 int main() {
     setlocale(0, "rus");
     int size;
-    cout << "Введите размер массива: ";
+    cout << "Р’РІРµРґРёС‚Рµ СЂР°Р·РјРµСЂ РјР°СЃСЃРёРІР°: ";
     cin >> size;
 
     int* arr = new int[size];
 
-    cout << "Введите элементы массива:\n";
+    cout << "Р’РІРµРґРёС‚Рµ СЌР»РµРјРµРЅС‚С‹ РјР°СЃСЃРёРІР°:\n";
     for (int i = 0; i < size; ++i) {
         cin >> arr[i];
     }
@@ -50,7 +50,7 @@ int main() {
     int newSize;
     int* newArr = removePrimes(arr, size, newSize);
 
-    cout << "Новый массив без простых чисел:\n";
+    cout << "РќРѕРІС‹Р№ РјР°СЃСЃРёРІ Р±РµР· РїСЂРѕСЃС‚С‹С… С‡РёСЃРµР»:\n";
     for (int i = 0; i < newSize; ++i) {
         cout << newArr[i] << " ";
     }
